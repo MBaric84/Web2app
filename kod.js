@@ -65,3 +65,13 @@ app.get('/tickets', async (req, res) => {
 app.listen(process.env.PORT || 3000, () => {
   console.log('Server is running');
 });
+
+const { Pool } = require('pg'); // Assuming you're using 'pg' for PostgreSQL
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false, // Required for Render PostgreSQL if using External URL
+  },
+});
+
+module.exports = pool;

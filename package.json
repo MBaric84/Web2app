@@ -1,0 +1,17 @@
+{
+  "name": "ticket-generator",
+  "version": "1.0.0",
+  "description": "Ticket generator with QR codes and OAuth2 authentication",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.1",
+    "qrcode": "^1.5.4"
+  }
+
+}
